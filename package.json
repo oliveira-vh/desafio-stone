@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Victor Hugo Sousa de Oliveira",
+  "license": "",
   "dependencies": {
     "underscore": "^1.12.0"
   }

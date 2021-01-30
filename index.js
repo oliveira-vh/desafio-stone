@@ -1,5 +1,5 @@
-const { items } = require('./items');
-const { emails } = require('./emails');
+const { items } = require('./listas/items');
+const { emails } = require('./listas/emails');
 const { corrigirValor } = require('./corrigirValor')
 
 const calcular = (items, emails) => {
@@ -7,15 +7,12 @@ const calcular = (items, emails) => {
     if(!(Object.keys(items).length === 0) && emails.length > 0){
         //calcular o total
         const total = items.map(item => item.preco*item.qte).reduce((acc, preco) => acc + preco, 0)
-        console.log('total da compra', total)
 
         //dividir entre os usuarios
         const arrayCustoPorUsuario = emails.map(email => total/emails.length)
 
         //corrigir valor
         const custoPorUsuarioCorrigido = corrigirValor(arrayCustoPorUsuario, total)
-
-        console.log('custo por usuario', custoPorUsuarioCorrigido)
 
         let mapCustoPorUsuario = {};
         let i = 0;
@@ -24,10 +21,14 @@ const calcular = (items, emails) => {
             i++
         });
 
-        return mapCustoPorUsuario
+        return {
+            total, 
+            'custo por usuário: ': mapCustoPorUsuario
+        }
     } else {
-        return 'Entradas inválidas. Listas não podem estar vazias!'
+        return 'Entradas inválidas. Uma ou ambas as listas não podem estar vazias!'
     }
 
 }
+
 console.log(calcular(items, emails))

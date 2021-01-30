@@ -6,7 +6,7 @@ exports.items = [
     },
     {
         produto: "uva",
-        preco: 300,
+        preco: 301,
         qte: 1
     },
     {
@@ -15,23 +15,23 @@ exports.items = [
         qte: 5
     },
     {
-        produto: "bolacha",
+        produto: "limao",
         preco: 345,
         qte: 2
     },
     {
-        produto: "bolacha",
-        preco: 100,
+        produto: "suco",
+        preco: 300,
         qte: 14
     },
     {
-        produto: "bolacha",
+        produto: "amendoim",
         preco: 100,
         qte: 5
     },
     {
-        produto: "bolacha",
-        preco: 100,
+        produto: "refrigerante",
+        preco: 700,
         qte: 5
     },
 ]
